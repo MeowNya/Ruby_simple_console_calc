@@ -10,12 +10,13 @@ loop {
     break if c.downcase == ST
     c = c.to_f
     case b
-        when '+' then puts a + с
-        when '-'then puts a - с
+        when '+' then puts a + c
+        when '-'then puts a - c
         when '*' then puts a * c
-        when ('/' && c.nonzero?) then puts a / c
-        when ()
-        else print "Unrecognized sign"
+        when '/' then if c.nonzero? puts a / c 
+        	else puts 'division by zero'
+        end
+        else puts "Unrecognized sign '#{b}'"
     end
 	
 }
